@@ -6,6 +6,7 @@ import java.util.Scanner;
 
 import com.qlsv.entity.SinhVien;
 import com.qlsv.entity.SinhVienKT;
+import com.qlsv.entity.SinhVienPM;
 
 public class SVInAdd {
 	
@@ -17,7 +18,7 @@ public class SVInAdd {
 		this.out = out;
 	}
 	
-	private SinhVien inputSV() {
+	public SinhVien inputSV() {
 		//xử lý nhập phần chung/ cha
 		SinhVien sv = null;
 		int maSV;
@@ -49,13 +50,31 @@ public class SVInAdd {
 		}
 		
 		if("PM".equalsIgnoreCase(nganh)) {
-			inputSVPM();
+			sv = inputSVPM(maSV, hoTen, nganh, null);
 		}
+		
 		return sv;
 	}
 	
-	private SinhVien inputSVPM() {
-		return null;
+	private SinhVien inputSVPM(int maSV, String hoTen, String nganh,
+			Date ngaySinh) {
+		double diemJava, diemCss, diemHtml;
+		SinhVienPM sinhVienPM = null;
+		// nhập vào htong thin sinh viên phần mềm
+		out.print("[ĐIỂM JAVA]:");
+		out.flush();
+		diemJava = in.nextDouble();
+		out.print("[ĐIỂM CSS]:");
+		out.flush();
+		diemCss = in.nextDouble();
+		out.print("[ĐIỂM HTML]:");
+		out.flush();
+		diemHtml = in.nextDouble();
+
+		sinhVienPM = new SinhVienPM(maSV, hoTen, nganh, ngaySinh,
+				diemJava, diemCss, diemHtml);
+
+		return sinhVienPM;
 		
 	}
 	
