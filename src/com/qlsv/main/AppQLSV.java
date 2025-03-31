@@ -23,7 +23,7 @@ public class AppQLSV {
 		menu = new SVMenu(out, in, prompt);
 		
 		//gửi thông điệp
-		out.print("~~~~CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN~~~~");
+		out.println("~~~~CHƯƠNG TRÌNH QUẢN LÝ SINH VIÊN~~~~");
 		out.flush();
 		
 		//gửi thông điệp

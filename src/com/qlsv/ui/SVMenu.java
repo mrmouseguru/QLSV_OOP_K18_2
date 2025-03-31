@@ -3,11 +3,14 @@ package com.qlsv.ui;
 import java.io.PrintWriter;
 import java.util.Scanner;
 
+import com.qlsv.control.SVControlAdd;
+
 public class SVMenu {
 	
-	PrintWriter out;
-	Scanner in;
-	String prompt;
+	private PrintWriter out;
+	private Scanner in;
+	private String prompt;
+	private SVControlAdd svControlAdd; 
 	
 	public SVMenu(){
 		
@@ -19,6 +22,17 @@ public class SVMenu {
 		in = _in;
 		out = _out;
 		prompt = _prompt;
+	}
+	
+	
+
+	public SVMenu(PrintWriter out, Scanner in, String prompt, 
+			SVControlAdd svControlAdd) {
+//		this.out = out;
+//		this.in = in;
+//		this.prompt = prompt;
+		this(out, in, prompt);
+		this.svControlAdd = svControlAdd;
 	}
 
 	public void controlLoop() {
@@ -35,12 +49,16 @@ public class SVMenu {
 				help();
 				continue;
 			}
+			if("add".equalsIgnoreCase(command)) {
+				add();
+				continue;
+			}
 		}
 	}
 
 
 
-	void help() {
+	private void help() {
 		out.println("~~~~~~~~User Help Menu~~~~~~~~");
 		out.flush();
 		out.println("[HELP] huong dan su dung phan mem");
@@ -56,6 +74,11 @@ public class SVMenu {
 		out.println("~~~~~~~~User Help Menu~~~~~~~~");
 		out.flush();
 		
+	}
+	
+	private void add() {
+		//gửi thông điệp đến objec SVControlAdd
+		svControlAdd.add();
 	}
 	
 }

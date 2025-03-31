@@ -5,7 +5,7 @@ import com.qlsv.entity.SinhVien;
 import com.qlsv.ui.SVInAdd;
 import com.qlsv.ui.SVOutAdd;
 
-public class SinhVienControlAdd {
+public class SVControlAdd {
 	
 	private SVAddDAO svAddDAO;
 	private SVInAdd svInAdd;
@@ -15,10 +15,10 @@ public class SinhVienControlAdd {
 	
 	//constructors()
 
-	public SinhVienControlAdd() {
+	public SVControlAdd() {
 	}
 
-	public SinhVienControlAdd(SVAddDAO svAddDAO, 
+	public SVControlAdd(SVAddDAO svAddDAO, 
 			SVInAdd svInAdd, SVOutAdd svOutAdd) {
 		this.svAddDAO/*field*/ = svAddDAO /*htam số*/;
 		this.svInAdd = svInAdd;
