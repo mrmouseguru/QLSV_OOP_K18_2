@@ -25,6 +25,12 @@ public class SinhVienPM extends SinhVien{
 		return (2 * diemJava + diemHtml + diemCss) / 4;
 	}
 	
+	public void setDiemJava(double newDiemJava) {
+		if(newDiemJava >=0 && newDiemJava <=10) {
+			this.diemJava = newDiemJava;
+		}
+	}
+	
 	
 	
 	

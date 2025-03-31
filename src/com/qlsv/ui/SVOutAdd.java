@@ -22,7 +22,13 @@ public class SVOutAdd {
 		
 		out.println("Đã thêm một SV vào CSDL!!!!");
 		out.flush();
-		out.println(sv);
+
+		out.println(sv);//toString
+		out.flush();
+		
+		out.println("[MÃ SV]: " + sv.getMaSV());
+		out.flush();
+		out.println("[TÊN SV]: " + sv.getHoTen());
 		out.flush();
 		
 	}

@@ -25,6 +25,13 @@ public class SinhVienKT extends SinhVien{
 		return (2 * diemMarketing + diemSale) / 3;
 	}
 	
+	@Override
+	public String toString() {
+		return super.toString() /*gọi toString() của cha*/
+				+ "[ĐIỂM MARKETING]: " + this.diemMarketing
+				+ " [ĐIỂM SALES]: " + this.diemSale;
+	}
+	
 	
 	
 	

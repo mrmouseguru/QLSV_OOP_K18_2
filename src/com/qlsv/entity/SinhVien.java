@@ -9,10 +9,9 @@ public class SinhVien {
 	private String nganh;
 	private Date ngaySinh;
 	
-	public SinhVien() {}
+	protected SinhVien() {}
 	
-	public SinhVien(int maSV, String hoTen, String nganh, Date ngaySinh) {
-		super();
+	protected SinhVien(int maSV, String hoTen, String nganh, Date ngaySinh) {
 		this.maSV = maSV;
 		this.hoTen = hoTen;
 		this.nganh = nganh;
@@ -38,6 +37,23 @@ public class SinhVien {
             return "Xuất sắc";
         }
 		
+	}
+	
+	public int getMaSV() {
+		return this.maSV;
+	}
+	
+	public String getHoTen() {
+		return this.hoTen;
+	}
+	
+	public void setHoTen(String newHoTen) {
+		this.hoTen = newHoTen;
+	}
+	@Override
+	public String toString() {
+		return "[MASV]: " + this.maSV + " " + 
+				"[HO TÊN SV]: " + this.hoTen + " " ;
 	}
 	
 	
