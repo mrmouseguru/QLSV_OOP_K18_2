@@ -32,6 +32,10 @@ public class MemorySVDB {
 		
 	}
 	
+	public static ArrayList<SinhVien> getDSSV(){
+		return svDB;
+	}
+	
 	//lấy danh sách Sinh viên
 	
 	// sửa
