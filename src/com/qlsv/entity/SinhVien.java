@@ -2,7 +2,7 @@ package com.qlsv.entity;
 
 import java.util.Date;
 
-public class SinhVien {
+public abstract class SinhVien {
 	
 	private int maSV;
 	private String hoTen;
@@ -22,9 +22,10 @@ public class SinhVien {
 		this.ngaySinh = ngaySinh;
 	}
 	
-	public double tinhDiem() {
-		return 0;
-	}
+	public abstract double tinhDiem(); 
+	//{
+		//return 0;
+	//}
 	
 	public String tinhHocLuc() {
 		
@@ -58,6 +59,11 @@ public class SinhVien {
 	public String toString() {
 		return "[MASV]: " + this.maSV + " " + 
 				"[HO TÊN SV]: " + this.hoTen + " " ;
+	}
+	
+	public static void main(String[] args) {
+		SinhVien sv;
+		//sv = new SinhVien(0, null, null, null);
 	}
 	
 	
