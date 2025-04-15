@@ -23,7 +23,8 @@ public class SVOutPrint {
 			out.printf("%-10d %-20s %-10s %-10s %-5.2f %-10s\n", sinhVien.getMaSV(), 
 					sinhVien.getHoTen(), 
 					sinhVien.getNganh(), "    ", 
-					sinhVien.tinhDiem(), sinhVien.tinhHocLuc());
+					sinhVien.tinhDiem(), //đa hình
+					sinhVien.tinhHocLuc());
 			out.flush();
 
 		}
