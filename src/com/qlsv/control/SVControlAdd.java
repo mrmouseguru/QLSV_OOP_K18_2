@@ -20,7 +20,7 @@ public class SVControlAdd {
 	public SVControlAdd() {
 	}
 
-	public SVControlAdd(MemorySVAddDAO svAddDAO, 
+	public SVControlAdd(SVAddDAO svAddDAO, 
 			SVInAdd svInAdd, SVOutAdd svOutAdd) {
 		this.svAddDAO/*field*/ = svAddDAO /*htam số*/;
 		this.svInAdd = svInAdd;
